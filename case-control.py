@@ -36,4 +36,4 @@ CaseCommendLine="bcftools view -s " + CaseString+ " MIGen_ExS_28K.v6.ATVB_NoDup.
 ControlCommendLine="bcftools view -s " + ControlString+ " MIGen_ExS_28K.v6.ATVB_NoDup.vcf.gz | bgzip -c > MIGen_ExS_28K.v6.ATVB_NoDup_Control.vcf.gz"
 CommendLine= CaseCommendLine + " && " + ControlCommendLine
 
-#subprocess.Popen(CommendLine,shell=True)
+subprocess.Popen(CommendLine,shell=True)
