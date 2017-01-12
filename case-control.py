@@ -8,10 +8,10 @@ HeaderFile="../Files/example.vcf"
 #InputFileName is a VCF file that contains your sample name information, no variants and sample information required#
 InputFileName = "MIGen_ExS_28K.v6.ATVB_NoDup.vcf.gz"
 #CasePattern is the string feature that is only contained in case sample name# 
-CasePattern="A"
+CasePattern = "A"
 #ControlPattern is the string feature that is only contained in control sample name# 
-ControlPattern="B"
-
+ControlPattern = "B"
+######## This part can be comstumed###########
 
 
 
@@ -29,12 +29,12 @@ CaseString = ""
 Control=[]
 ControlString=""
 for CasePattern in SampleNameList:
-	if "A" in sample:
+	if CasePattern in sample:
 		Commend=Commend+"+"
 		Case.append(sample)
 		NumberPlus=NumberPlus+1
 		CaseString=CaseString+sample+","
-	elif "B" in sample:
+	elif ControlPattern in sample:
 		Commend=Commend+"-"
 		Control.append(sample)
 		NumberMinus=NumberMinus+1
