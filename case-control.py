@@ -1,16 +1,18 @@
 import vcf
 import subprocess
-#import sys, optparse
-
+import sys, optparse
+usage="python xx.py HeaderFile.vcf InputFileName.vcf.gz CasePattern ControlPattern"
+parser = optparse.OptionParser(usage=usage)
+options, infile = parser.parse_args()
 ######## This part can be comstumed###########
 #HeaderFile is a VCF file that contains your sample name information, no variants and sample information required#
-HeaderFile="../Files/example.vcf"
+HeaderFile = infile[0]
 #InputFileName is a VCF file that contains your sample name information, no variants and sample information required#
-InputFileName = "MIGen_ExS_28K.v6.ATVB_NoDup.vcf.gz"
+InputFileName = infile[1] #"MIGen_ExS_28K.v6.ATVB_NoDup.vcf.gz"
 #CasePattern is the string feature that is only contained in case sample name# 
-CasePattern = "A"
+CasePattern = infile[2] #"A"
 #ControlPattern is the string feature that is only contained in control sample name# 
-ControlPattern = "B"
+ControlPattern = infile[3] #"B"
 ######## This part can be comstumed###########
 
 
