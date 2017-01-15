@@ -7,7 +7,7 @@ options, infile = parser.parse_args()
 ######## This part can be comstumed###########
 #HeaderFile is a VCF file that contains your sample name information, no variants and sample information required#
 HeaderFile = infile[0]
-#InputFileName is a VCF file that contains your sample name information, no variants and sample information required#
+#InputFileName is a VCF.gz file that you want to annotate#
 InputFileName = infile[1] #"MIGen_ExS_28K.v6.ATVB_NoDup.vcf.gz"
 #CasePattern is the string feature that is only contained in case sample name# 
 CasePattern = infile[2] #"A"
